@@ -60,6 +60,12 @@ function saveList() {
   localStorage.setItem("list", JSON.stringify(list));
 }
 
+function validatePhoneNumber(phone) {
+  const regex = /^(?:\+7|8)\s*\(?\d{3}\)?[\s-]?\d{3}[\s-]?\d{2}[\s-]?\d{2}$/;
+  return regex.test(phone);
+}
+
+
 document
   .getElementById("consultationForm")
   .addEventListener("submit", function (event) {
@@ -79,10 +85,10 @@ document
       isValid = false;
     }
 
-    const phoneInput = document.getElementById("phone");
-    if (!phoneInput.value.trim()) {
-      phoneInput.classList.add("error");
-      isValid = false;
+    const phoneInput = document.getElementById('phone');
+    if (!phoneInput.value.trim() || !validatePhoneNumber(phoneInput.value.trim())) {
+        phoneInput.classList.add('error');
+        isValid = false;
     }
 
     if (!checkBox.checked) {
