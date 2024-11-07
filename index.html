@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Дистрибьютеры</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Onest&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://api-maps.yandex.ru/v3/?apikey=5f800b37-ed0d-4c95-a0ce-b72d8ebf590f&lang=ru_RU"></script>
+
+    <script src="./scripts/script.js" type="module" defer></script>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <section class="map">
+          <div id="map" style="width: 100%; height: 660px"></div>
+        </section>
+        <section class="img">
+          <h1 class="title img__title">
+            Получите коммерческое <br />
+            предложение
+          </h1>
+          <div class="img__body">
+            <h2 class="subtitle img__subtitle">
+              500+ эффективных препаратов <br />
+              всегда в наличии
+            </h2>
+            <button class="text img__btn">Стать дистрибьютором</button>
+          </div>
+        </section>
+        <section class="form">
+          <div class="form__info">
+            <h2 class="form__title">
+              Оставьте заявку на бесплатную консультацию!
+            </h2>
+            <p class="text form__text">
+              Менеджер свяжется с вами и назначит удобное время
+            </p>
+          </div>
+          <form action="" class="form__body" id="consultationForm">
+            <input
+              type="text"
+              class="form__input"
+              placeholder="Имя"
+              id="name"
+            />
+            <input
+              type="text"
+              class="form__input"
+              placeholder="Телефон"
+              id="phone"
+            />
+            <div class="form__check">
+              <input
+                type="checkbox"
+                id="check"
+                name="check"
+                class="form__checkbox"
+              />
+              <label class="form__label" for="check">
+                Я согласен с условиями&nbsp;
+                <a href="" class="form__link"> Политики конфиденциальности</a>
+              </label>
+            </div>
+            <button class="form__btn" type="submit">
+              Получить консультацию
+            </button>
+          </form>
+        </section>
+        <section class="list">
+          <h2 class="text list__title">Список заявок:</h2>
+
+          <div class="list__body"></div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

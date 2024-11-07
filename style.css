@@ -1,0 +1,390 @@
+/* обнуляем все настройки по умолчанию */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+/* меняет подсчет ширины блока для удобства */
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* убираем линии обводки у браузеров */
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+/* делаем значения блочными */
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+/* уравниваем поведение шрифтов и элементов для разных браузеров */
+html,
+body {
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -mos-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+/* просим теги наследовать семейство шрифта */
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+/* убираем некоторые особенности в разных браузерах */
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+/* обнуляем заголовки h */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/* ------------------------------------ */
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Onest", serif;
+  background: #f8f9fa;
+  color: #212529;
+}
+/*! typography --------------------------------------------------*/
+.title {
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 55px;
+}
+
+.subtitle {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 27.5px;
+}
+
+.text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+}
+
+/*! typography --------------------------------------------------*/
+
+/*! ui --------------------------------------------------*/
+main {
+  margin: 80px 0;
+}
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+}
+@media (max-width: 1160px) {
+  .container {
+    padding: 0px 10px;
+  }
+}
+.img {
+  padding: 40px;
+  background-image: url(./img/Rectangle27.png);
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  color: white;
+  margin-bottom: 80px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+.img__body {
+  display: flex;
+  justify-content: space-between;
+}
+.img__btn {
+  padding: 21px 24px;
+  border-radius: 10px;
+  color: white;
+  background: #212529;
+}
+
+.form {
+  background: #212529;
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  display: flex;
+  color: white;
+  justify-content: space-between;
+}
+.form__info {
+  width: 21.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+.form__title {
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 38.5px;
+}
+
+.form__body {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 33.75rem;
+}
+.form__input {
+  padding: 16px 20px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #212529;
+  background: #ffffff;
+  border-radius: 10px;
+}
+.form__input::placeholder {
+  color: #adb5bd;
+}
+.form__check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.form__checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.form__checkbox + .form__label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+.form__checkbox + .form__label::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1.25px solid white;
+  border-radius: 4px;
+  margin-right: 8px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+}
+.form__checkbox + .form__label:hover::before {
+  border: 1.25px solid white;
+}
+
+.form__checkbox:checked + .form__label::before {
+  border-color: white;
+  background-color: white;
+  background-image: url("./img/Vector.svg");
+}
+
+.form__label {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.8px;
+}
+.form__link {
+  color: #ffffff;
+  text-decoration: underline;
+}
+.form__btn {
+  padding: 16px 0;
+  width: 100%;
+  border: 1px solid #ffffff;
+  background: transparent;
+  color: white;
+  border-radius: 10px;
+}
+.map {
+  overflow: hidden;
+  margin-bottom: 80px;
+  border-radius: 20px;
+}
+.map-circle-placemark {
+  width: 0px !important;
+}
+.marker {
+  width: 40px;
+  height: 55px;
+}
+
+.list {
+  border-radius: 10px;
+  background-color: #212529;
+  margin-top: 20px;
+  padding: 20px;
+}
+.list__title {
+  color: white;
+}
+.list__body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+.list__item {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  background-color: white;
+  color: #212529;
+  border-radius: 10px;
+  padding: 10px;
+}
+.list__name {
+  font-weight: bold;
+}
+@media (max-width: 640px) {
+  .img__body {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .img__btn {
+    width: 255px;
+  }
+
+  .form {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .form__info {
+    width: 34.75rem;
+    gap: 10px;
+  }
+  .form__body {
+    width: 100%;
+  }
+}
+
+@media (max-width: 330px) {
+  #map {
+    height: 400px !important;
+  }
+  .map {
+    margin-bottom: 60px;
+  }
+  .img {
+    padding: 15px 20px;
+    height: 400px;
+  }
+  .img__title {
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 38.5px;
+  }
+  .img__subtitle {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 19.8px;
+  }
+  .form {
+    gap: 20px;
+    padding: 20px;
+  }
+  .form__info {
+    width: 100%;
+    gap: 10px;
+  }
+  .form__body {
+    gap: 10px;
+  }
+  .form__title {
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 27.5px;
+  }
+  .form__input {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    padding: 13px 10px;
+  }
+  .img {
+    margin-bottom: 60px;
+  }
+  .form__text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+  }
+  .form__body {
+    width: 100%;
+  }
+  .form__checkbox + .form__label {
+    display: inline;
+  }
+  .form__checkbox + .form__label::before {
+    position: relative;
+    top: 5px;
+  }
+  .form__btn {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 0;
+    line-height: 16px;
+  }
+  .form__link {
+    margin-left: 30px;
+  }
+}
+.error {
+  border: 1px solid red;
+}
